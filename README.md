@@ -1,0 +1,2 @@
+# coinman
+Money counting thing
