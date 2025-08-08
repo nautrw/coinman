@@ -1,5 +1,7 @@
 from textual.app import App, ComposeResult
+from textual.containers import HorizontalGroup, VerticalScroll
 from textual.widgets import Footer, Header
+from widgets import CoinCounter
 
 
 class CoinManApp(App):
@@ -7,6 +9,7 @@ class CoinManApp(App):
 
     def compose(self) -> ComposeResult:
         yield Header()
+        yield VerticalScroll(CoinCounter())
         yield Footer()
 
     def action_toggle_dark(self) -> None:
